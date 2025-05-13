@@ -1,0 +1,117 @@
+$black: #202020;
+$white: #fff;
+$red: #f83758;
+
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $black;
+    max-width: 1848px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    padding: 15px 20px;
+    height: 76px;
+
+    &__listitem {
+        font-size: 16px;
+
+        &_link {
+            color: $white;
+            @media screen and ( max-width: 1280px){
+                color: $black;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        column-gap: 40px;
+
+        @media screen and ( max-width: 1380px){
+            column-gap: 24px;
+        }
+        @media screen and ( max-width: 1280px){
+            display: none;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            padding: 0 30px;
+        }
+
+
+    }
+
+    &__buttons {
+        display: flex;
+        column-gap: 10px;
+
+        @media screen and ( max-width: 1280px){
+            display: none;
+            margin-top: 40px;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 0 40px;
+        }
+    }
+
+    &__button{
+        font-weight: 600;
+        font-size: 14px;
+        border-radius: 9999px;
+        padding: 12px 24px;
+        height: 42px;
+        width: 167px;
+        background: $red;
+        color: $white;
+        cursor: pointer;
+
+        &_small {
+            border-radius: 50%;
+            background: $red;
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &--burger {
+                display: none;
+                @media screen and ( max-width: 1280px){
+                    width: 42px;
+                    height: 42px;
+                    background: $red;
+                    border-radius: 10px;
+                    display: block;
+                }
+            }
+        }
+
+        &_black {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 9999px;
+            width: 167px;
+            color: $white;
+            cursor: pointer;
+            @media screen and ( max-width: 1280px){
+                background: $red;
+                height: 42px;
+                width: 167px;
+            }
+        }
+    }
+}
+
+.modal {
+    display: none;
+
+    @media screen and ( max-width: 1280px){
+        display: flex;
+    }
+}
